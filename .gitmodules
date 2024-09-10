@@ -1,0 +1,6 @@
+[submodule "jaeger"]
+	path = jaeger
+	url = https://github.com/jaegertracing/jaeger.git
+[submodule "jaeger-operator"]
+	path = jaeger-operator
+	url = https://github.com/jaegertracing/jaeger-operator.git

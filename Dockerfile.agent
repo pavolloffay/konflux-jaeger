@@ -1,0 +1,34 @@
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_8_golang_1.22 as builder
+
+WORKDIR /opt/app-root/src
+USER root
+
+COPY jaeger .
+# this directory is checked by ecosystem-cert-preflight-checks task in Konflux
+COPY jaeger/LICENSE /licenses/
+
+RUN export VERSION_PKG="github.com/jaegertracing/jaeger/pkg/version" && \
+  export VERSION_DATE=`date -u +'%Y-%m-%dT%H:%M:%SZ'` && \
+  export GIT_LATEST_TAG=`git describe --abbrev=0 --tags` && echo $GIT_LATEST_TAG && \
+  export GIT_COMMIT_SHA=`git rev-parse HEAD` && echo $GIT_COMMIT_SHA && \
+  go build -C ./cmd/agent -mod=mod -o ./jaeger -trimpath -ldflags "-s -w -X ${VERSION_PKG}.commitSHA=${GIT_COMMIT_SHA} -X ${VERSION_PKG}.latestVersion=${GIT_LATEST_TAG} -X ${VERSION_PKG}.date=${VERSION_DATE}"
+
+
+FROM registry.redhat.io/ubi8/ubi-minimal:8.10-1052.1724178568
+WORKDIR /
+
+RUN mkdir /licenses
+COPY jaeger/LICENSE /licenses/.
+COPY --from=builder /opt/app-root/src/cmd/agent/jaeger /usr/bin/jaeger
+
+ARG USER_UID=1001
+USER ${USER_UID}
+ENTRYPOINT ["/usr/bin/jaeger"]
+
+LABEL com.redhat.component="jaeger-agent-container" \
+      name="rhosdt/jaeger-agent-rhel8" \
+      summary="Jaeger Agent" \
+      description="Agent for the distributed tracing system" \
+      io.openshift.expose-services="5775/udp:zipkincompact,6831/udp:compact,6832/udp:binary,5778:config" \
+      io.openshift.tags="tracing" \
+      io.k8s.display-name="Jaeger agent"
