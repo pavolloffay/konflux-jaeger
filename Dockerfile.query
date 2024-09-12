@@ -45,5 +45,3 @@ LABEL com.redhat.component="jaeger-query-container" \
       io.openshift.expose-services="16686:uihttp" \
       io.openshift.tags="tracing" \
       io.k8s.display-name="Jaeger Query"
-
-
