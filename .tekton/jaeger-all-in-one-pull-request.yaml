@@ -4,21 +4,21 @@ metadata:
   annotations:
     build.appstudio.openshift.io/repo: https://github.com/pavolloffay/konflux-jaeger?rev={{revision}}
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
+    build.appstudio.redhat.com/pull_request_number: '{{pull_request_number}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/max-keep-runs: "3"
-    build.appstudio.openshift.io/build-nudge-files: "bundle-patch/update_bundle.sh"
-    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch == "main" &&
+    pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch == "main" &&
       (".tekton/multi-arch-build-pipeline.yaml".pathChanged() ||
-      ".tekton/jaeger-allinone-pull-request.yaml".pathChanged() ||
-      ".tekton/jaeger-allinone-push.yaml".pathChanged() ||
+      ".tekton/jaeger-all-in-one-pull-request.yaml".pathChanged() ||
+      ".tekton/jaeger-all-in-one-push.yaml".pathChanged() ||
       "Dockerfile.allinone".pathChanged() ||
       "jaeger".pathChanged())
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: jaeger
-    appstudio.openshift.io/component: jaeger-allinone
+    appstudio.openshift.io/component: jaeger-all-in-one
     pipelines.appstudio.openshift.io/type: build
-  name: jaeger-allinone-on-push
+  name: jaeger-all-in-one-on-pull-request
   namespace: rhosdt-tenant
 spec:
   params:
@@ -27,7 +27,9 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-allinone:{{revision}}
+    value: quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-all-in-one:on-pr-{{revision}}
+  - name: image-expires-after
+    value: 5d
   - name: dockerfile
     value: Dockerfile.allinone
   - name: path-context
@@ -36,8 +38,8 @@ spec:
     value:
       - localhost
       - linux/arm64
-      - linux/ppc64le
-      - linux/s390x
+  #     - linux/ppc64le
+  #     - linux/s390x
   pipelineRef:
     name: build-pipeline
   taskRunTemplate: {}
