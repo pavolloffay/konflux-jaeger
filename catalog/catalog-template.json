@@ -13,6 +13,11 @@
         {
             "entries": [
                 {
+                    "name": "jaeger-operator.v1.57.0-100",
+                    "replaces": "jaeger-operator.v1.57.0-10",
+                    "skipRange": "\u003e=1.13.0 \u003c1.57.0-100"
+                },
+                {
                     "name": "jaeger-operator.v1.30.2",
                     "skipRange": "\u003e=1.13.0 \u003c1.30.2"
                 },
@@ -77,6 +82,10 @@
             "name": "stable",
             "package": "jaeger-product",
             "schema": "olm.channel"
+        },
+        {
+            "schema": "olm.bundle",
+            "image": "quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-bundle@sha256:cf45a7665e843bdf1b8a3afcc8982e0db37f883da633f7b227e31986056f45d3"
         },
         {
             "schema": "olm.bundle",
