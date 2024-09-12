@@ -17,7 +17,7 @@ export JAEGER_ROLLOVER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tena
 # Separate due to merge conflicts
 export JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-es-index-cleaner@sha256:23b0dd406c83be098ad90d23d1bdee9b088e5c0b4b8a34ac9eb9c311d23baf7a"
 # Separate due to merge conflicts
-export JAEGER_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-operator@sha256:8b5236616be7e4ebf1668dfc6120d29b40c5b209fea603637477edbb7f5fe515"
+export JAEGER_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-operator@sha256:f2adb76129bc38c42f2308e073e5a2349ebd440f45be7a1453ab33410ed4ec7c"
 
 
 export CSV_FILE=/manifests/jaeger-operator.clusterserviceversion.yaml
