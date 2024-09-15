@@ -33,6 +33,19 @@ LABEL operators.operatorframework.io.test.config.v1=tests/scorecard/
 
 LABEL com.redhat.openshift.versions=v4.12
 
+LABEL release="1.57.0-100" \
+      version="1.57.0-100" \
+      name="rhosdt/jaeger-operator-bundle" \
+      distribution-scope="public" \
+      description="Bundle for Jaeger operator" \
+      io.k8s.description="Bundle for Jaeger operator." \
+      # TODO check if this is correct
+      com.redhat.component="rhosdt" \
+      url="https://github.com/jaegertracing/jaeger-operator" \
+      vendor="Red Hat, Inc." \
+      summary="Jaeger operator bundle" \
+      maintainer="support@redhat.com"
+
 # Copy files to locations specified by labels.
 COPY --from=builder /manifests /manifests/
 COPY --from=builder /metadata /metadata/
