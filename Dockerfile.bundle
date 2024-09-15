@@ -31,10 +31,9 @@ LABEL operators.operatorframework.io.metrics.project_layout=go.kubebuilder.io/v3
 LABEL operators.operatorframework.io.test.mediatype.v1=scorecard+v1
 LABEL operators.operatorframework.io.test.config.v1=tests/scorecard/
 
-LABEL com.redhat.openshift.versions=v4.12
-
 LABEL release="1.57.0-100" \
       version="1.57.0-100" \
+      com.redhat.openshift.versions=v4.12
       name="rhosdt/jaeger-operator-bundle" \
       distribution-scope="public" \
       description="Bundle for Jaeger operator" \
