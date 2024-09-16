@@ -65,7 +65,8 @@ upstream_csv['spec']['relatedImages'] = [
     {'name': 'ingester', 'image': os.getenv('JAEGER_INGESTER_IMAGE_PULLSPEC')},
     {'name': 'all-in-one', 'image': os.getenv('JAEGER_ALL_IN_ONE_IMAGE_PULLSPEC')},
     {'name': 'es-index-cleaner', 'image': os.getenv('JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC')},
-    {'name': 'es-rollover', 'image': os.getenv('JAEGER_ROLLOVER_IMAGE_PULLSPEC')}]
+    {'name': 'es-rollover', 'image': os.getenv('JAEGER_ROLLOVER_IMAGE_PULLSPEC')},
+    {'name': 'ose-rbac-proxy', 'image': os.getenv('OSE_KUBE_RBAC_PROXY_PULLSPEC')}]
 
 with open('./patch_csv.yaml') as pf:
     patch = yaml.load(pf)

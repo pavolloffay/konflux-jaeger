@@ -105,11 +105,11 @@ spec:
                       - name: RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY
                         value: registry.redhat.io/openshift4/ose-oauth-proxy:latest
                       - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY
-                        value: registry.redhat.io/openshift4/ose-kube-rbac-proxy:latest
+                        value: ose-kube-rbac-proxy-container-pullspec
                       - name: POD_NAME
                         valueFrom:
                          fieldRef:
                            fieldPath: metadata.name
 
                   - name: kube-rbac-proxy
-                    image: 'registry.redhat.io/openshift4/ose-kube-rbac-proxy:latest'
+                    image: ose-kube-rbac-proxy-container-pullspec
