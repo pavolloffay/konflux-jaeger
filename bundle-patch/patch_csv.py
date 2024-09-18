@@ -58,15 +58,16 @@ upstream_csv['metadata']['annotations']['repository'] = 'https://github.com/os-b
 upstream_csv['metadata']['annotations']['containerImage'] = os.getenv('JAEGER_OPERATOR_IMAGE_PULLSPEC', '')
 
 upstream_csv['spec']['relatedImages'] = [
-    {'name': 'operator', 'image': os.getenv('JAEGER_OPERATOR_IMAGE_PULLSPEC')},
-    {'name': 'collector', 'image': os.getenv('JAEGER_COLLECTOR_IMAGE_PULLSPEC')},
-    {'name': 'query', 'image': os.getenv('JAEGER_QUERY_IMAGE_PULLSPEC')},
-    {'name': 'agent', 'image': os.getenv('JAEGER_AGENT_IMAGE_PULLSPEC')},
-    {'name': 'ingester', 'image': os.getenv('JAEGER_INGESTER_IMAGE_PULLSPEC')},
-    {'name': 'all-in-one', 'image': os.getenv('JAEGER_ALL_IN_ONE_IMAGE_PULLSPEC')},
-    {'name': 'es-index-cleaner', 'image': os.getenv('JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC')},
-    {'name': 'es-rollover', 'image': os.getenv('JAEGER_ROLLOVER_IMAGE_PULLSPEC')},
-    {'name': 'ose-rbac-proxy', 'image': os.getenv('OSE_KUBE_RBAC_PROXY_PULLSPEC')}]
+    {'name': 'jaeger-operator', 'image': os.getenv('JAEGER_OPERATOR_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-collector', 'image': os.getenv('JAEGER_COLLECTOR_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-query', 'image': os.getenv('JAEGER_QUERY_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-agent', 'image': os.getenv('JAEGER_AGENT_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-ingester', 'image': os.getenv('JAEGER_INGESTER_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-all-in-one', 'image': os.getenv('JAEGER_ALL_IN_ONE_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-es-index-cleaner', 'image': os.getenv('JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC')},
+    {'name': 'jaeger-es-rollover', 'image': os.getenv('JAEGER_ROLLOVER_IMAGE_PULLSPEC')},
+    {'name': 'ose-rbac-proxy', 'image': os.getenv('OSE_KUBE_RBAC_PROXY_PULLSPEC')},
+    {'name': 'ose-oauth-proxy', 'image': os.getenv('OSE_OAUTH_PROXY_PULLSPEC')}]
 
 with open('./patch_csv.yaml') as pf:
     patch = yaml.load(pf)

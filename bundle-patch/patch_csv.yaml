@@ -77,6 +77,7 @@ spec:
 
                 containers:
                   - name: jaeger-operator
+                    image: jaeger-operator-container-pullspec
                     extra_ports:
                       - containerPort: 8383
                         name: http-metrics
@@ -103,7 +104,7 @@ spec:
                       - name: RELATED_IMAGE_JAEGER_ES_ROLLOVER
                         value: jaeger-rollover-container-pullspec
                       - name: RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY
-                        value: registry.redhat.io/openshift4/ose-oauth-proxy:latest
+                        value: ose-oauth-proxy-container-pullspec
                       - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY
                         value: ose-kube-rbac-proxy-container-pullspec
                       - name: POD_NAME
