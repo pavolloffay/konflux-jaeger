@@ -17,7 +17,7 @@ export JAEGER_ROLLOVER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tena
 # Separate due to merge conflicts
 export JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-es-index-cleaner@sha256:4253d649ee8cf39d5ba337f5e15a215959e288d26f9f02d117de0a695682e76b"
 # Separate due to merge conflicts
-export JAEGER_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-operator@sha256:af95bff1d101355d56abfd1ca3b1b77dc1946e1cbdb20076d5177f2beec9351e"
+export JAEGER_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-operator@sha256:cae2b3e62eb970d1512eb5984d1db54c37f46e38e4f6b3edbaa0fe5bf3edbf72"
 # Separate due to merge conflicts
 # TODO, we used to set the proxy image per OCP version
 export OSE_KUBE_RBAC_PROXY_PULLSPEC="registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:8204d45506297578c8e41bcc61135da0c7ca244ccbd1b39070684dfeb4c2f26c"
