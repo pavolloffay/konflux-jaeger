@@ -13,9 +13,9 @@
         {
             "entries": [
                 {
-                    "name": "jaeger-operator.v1.57.0-100",
+                    "name": "jaeger-operator.v1.61.0",
                     "replaces": "jaeger-operator.v1.57.0-10",
-                    "skipRange": "\u003e=1.13.0 \u003c1.57.0-100"
+                    "skipRange": "\u003e=1.13.0 \u003c1.61.0"
                 },
                 {
                     "name": "jaeger-operator.v1.30.2",
