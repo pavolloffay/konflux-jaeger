@@ -1,0 +1,72 @@
+---
+lockfileVersion: 1
+lockfileVendor: redhat
+arches:
+- arch: aarch64
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/aarch64/baseos/os/Packages/o/openssl-1.1.1k-12.el8_9.aarch64.rpm
+    repoid: ubi-8-baseos-rpms
+    size: 708212
+    checksum: sha256:0fc85904be25bedbd131b568c3f34261d116df1d0ab91edf1c0374cb3f739388
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+    sourcerpm: openssl-1.1.1k-12.el8_9.src.rpm
+  source:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/aarch64/baseos/source/SRPMS/Packages/o/openssl-1.1.1k-12.el8_9.src.rpm
+    repoid: ubi-8-baseos-source
+    size: 7738034
+    checksum: sha256:dc072a144f8e63b314f20f3ef95f9d371f51dcf31417449831adeedd48f86020
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+  module_metadata: []
+- arch: ppc64le
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/ppc64le/baseos/os/Packages/o/openssl-1.1.1k-12.el8_9.ppc64le.rpm
+    repoid: ubi-8-baseos-rpms
+    size: 731608
+    checksum: sha256:88976a1aeafd107b50d0a7c19317f499a5bdef153844f19afc3f4be0a5f5e4b1
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+    sourcerpm: openssl-1.1.1k-12.el8_9.src.rpm
+  source:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/ppc64le/baseos/source/SRPMS/Packages/o/openssl-1.1.1k-12.el8_9.src.rpm
+    repoid: ubi-8-baseos-source
+    size: 7738034
+    checksum: sha256:dc072a144f8e63b314f20f3ef95f9d371f51dcf31417449831adeedd48f86020
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+  module_metadata: []
+- arch: s390x
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/s390x/baseos/os/Packages/o/openssl-1.1.1k-12.el8_9.s390x.rpm
+    repoid: ubi-8-baseos-rpms
+    size: 714664
+    checksum: sha256:de1ba77d0e508528818581e94cc53324e18b9931dd6c0b68d94bfbd54fb3583d
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+    sourcerpm: openssl-1.1.1k-12.el8_9.src.rpm
+  source:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/s390x/baseos/source/SRPMS/Packages/o/openssl-1.1.1k-12.el8_9.src.rpm
+    repoid: ubi-8-baseos-source
+    size: 7738034
+    checksum: sha256:dc072a144f8e63b314f20f3ef95f9d371f51dcf31417449831adeedd48f86020
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+  module_metadata: []
+- arch: x86_64
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/x86_64/baseos/os/Packages/o/openssl-1.1.1k-12.el8_9.x86_64.rpm
+    repoid: ubi-8-baseos-rpms
+    size: 727800
+    checksum: sha256:b3ebcd7861e92e2970e59a8db2b28c92532ae8bb9d8dbf31c5f07fca18d949f1
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+    sourcerpm: openssl-1.1.1k-12.el8_9.src.rpm
+  source:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi8/8/x86_64/baseos/source/SRPMS/Packages/o/openssl-1.1.1k-12.el8_9.src.rpm
+    repoid: ubi-8-baseos-source
+    size: 7738034
+    checksum: sha256:dc072a144f8e63b314f20f3ef95f9d371f51dcf31417449831adeedd48f86020
+    name: openssl
+    evr: 1:1.1.1k-12.el8_9
+  module_metadata: []
