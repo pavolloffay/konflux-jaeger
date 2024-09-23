@@ -100,6 +100,9 @@ with open('./patch_csv.yaml') as pf:
             exit(2)
         print("Patching ", container['name'])
 
+        if container['name'] == 'jaeger-operator':
+            del upstream_container['command']
+
         # image
         if container.get('image') is not None:
             upstream_container['image'] = container.get('image')
