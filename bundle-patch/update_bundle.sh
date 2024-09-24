@@ -9,7 +9,7 @@ export JAEGER_AGENT_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/
 # Separate due to merge conflicts
 export JAEGER_INGESTER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-ingester@sha256:55da7b5f4ff5abc645611ad6aa37a0896624525fc5c4f6d4d52f7a414bc36368"
 # Separate due to merge conflicts
-export JAEGER_QUERY_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-query@sha256:38f5d973646bae0d5c5974d78d62f1da0f8e11a0369229766cfcd1de1cb97e56"
+export JAEGER_QUERY_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-query@sha256:c4e0c6e8aeeea0de441f588576b765df1bd74f990dba10855eb5760c872c409f"
 # Separate due to merge conflicts
 export JAEGER_ALL_IN_ONE_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-all-in-one@sha256:53492f57d3aedb40a35e2b1485c20f86dc28f92c950b77cfd4f6a6a344161b6c"
 # Separate due to merge conflicts
