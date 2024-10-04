@@ -29,6 +29,13 @@ spec:
         memory: 1Gi
       limits:
         memory: 4Gi
+  - pipelineTaskName: build
+    computeResources:
+      requests:
+        cpu: 300m
+        memory: 2Gi
+      limits:
+        memory: 4Gi
   params:
   - name: git-url
     value: '{{source_url}}'
