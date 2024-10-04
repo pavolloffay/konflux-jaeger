@@ -29,7 +29,7 @@ spec:
         memory: 1Gi
       limits:
         memory: 4Gi
-  - pipelineTaskName: build-container
+  - pipelineTaskName: build-images
     computeResources:
       requests:
         cpu: 300m
