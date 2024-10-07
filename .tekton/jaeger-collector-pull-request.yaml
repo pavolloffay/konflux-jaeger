@@ -21,6 +21,13 @@ metadata:
   name: jaeger-collector-on-pull-request
   namespace: rhosdt-tenant
 spec:
+  taskRunSpecs:
+    - pipelineTaskName: prefetch-dependencies
+      computeResources:
+        requests:
+          memory: 3Gi
+        limits:
+          memory: 4Gi
   params:
   - name: git-url
     value: '{{source_url}}'
