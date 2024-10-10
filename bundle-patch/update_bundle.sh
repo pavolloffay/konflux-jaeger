@@ -3,21 +3,21 @@
 set -e
 
 # The pullspec should be image index, check if all architectures are there with: skopeo inspect --raw docker://$IMG | jq
-export JAEGER_COLLECTOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-collector@sha256:65355ae5ebad9ab69d8ada2148faa5966b8048cfb39865847b4ef0f489317d16"
+export JAEGER_COLLECTOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-collector@sha256:617a111dcd572b18ab19572e96af9661abab6f53bc356c144f8a79fa93a45a09"
 # Separate due to merge conflicts
-export JAEGER_AGENT_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-agent@sha256:6a8d92d5ba078a645da1f6ee3cd261bb415322a1083e59e71631a3eb29467cb1"
+export JAEGER_AGENT_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-agent@sha256:a844c7cb7d11c8d8228049eefb7b3d18c6c60c11457e317de730eb9e275b4663"
 # Separate due to merge conflicts
-export JAEGER_INGESTER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-ingester@sha256:0a55fdddd4e22a1206da73e40e93a16696a3070ddf4e8b1373252981db4de388"
+export JAEGER_INGESTER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-ingester@sha256:5c6c466ce3baf56171a1ad54a999cb395a662e4a37271e16140ef7a8746376d4"
 # Separate due to merge conflicts
-export JAEGER_QUERY_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-query@sha256:c4e0c6e8aeeea0de441f588576b765df1bd74f990dba10855eb5760c872c409f"
+export JAEGER_QUERY_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-query@sha256:4a30743b2cbb5f32ecce81e9b1f95e8f41e1211f4f67a1106a5631df42a3b3c5"
 # Separate due to merge conflicts
-export JAEGER_ALL_IN_ONE_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-all-in-one@sha256:a17e08efad1d2f321399cc4c69352ae90b167931e7e66a28c7211f40983ae6ff"
+export JAEGER_ALL_IN_ONE_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-all-in-one@sha256:ae11d68f98e6d8091f9a08179a439b1b0ae2130af4aa1b54d614ebd8b631c58a"
 # Separate due to merge conflicts
-export JAEGER_ROLLOVER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-es-rollover@sha256:fa4920456a43f06cafd07de69ed7b9a5c3e4b7b1f419d45bc3bf327c976fd01b"
+export JAEGER_ROLLOVER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-es-rollover@sha256:1ad074a326c0dddfdceb04ef8dfa0fc315dbe5471981aed23472f391823796de"
 # Separate due to merge conflicts
-export JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-es-index-cleaner@sha256:2841013ea5a9d718905ac7c34fddcac7057cf33579a616033052af70a6413d29"
+export JAEGER_INDEX_CLEANER_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-es-index-cleaner@sha256:743e8cdd886a6b2c8d6ce1bf1fad667cf069540ede08f80f243b8dbc7ff5d787"
 # Separate due to merge conflicts
-export JAEGER_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-operator@sha256:283c03809769a7885e4ec5356b7c72b387444d77aa2aed7a6cd8d799dbce8204"
+export JAEGER_OPERATOR_IMAGE_PULLSPEC="quay.io/redhat-user-workloads/rhosdt-tenant/jaeger/jaeger-operator@sha256:a91ad35f13e4664b3079c31e8cda4ade2264c92befa4b729a594565015a977bf"
 # Separate due to merge conflicts
 # TODO, we used to set the proxy image per OCP version
 export OSE_KUBE_RBAC_PROXY_PULLSPEC="registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:8204d45506297578c8e41bcc61135da0c7ca244ccbd1b39070684dfeb4c2f26c"
